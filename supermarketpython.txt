@@ -1,0 +1,80 @@
+w = 5
+t = 12
+p = 10
+g = 7
+c = 15
+wprice = 1
+tprice = 2.5
+pprice = 4
+gprice = 2
+cprice = 1.50
+
+
+
+
+def main():
+    print("*************************************************************** ")
+    print("                Welcome to the Super Market!                    ")
+    print("****************************************************************")
+
+    print("Item:               Quantity:   Price:          Code:")
+    print(f"Water               {w}        $1.00           1A")
+    print(f"Toys                {t}        $2.50           2B")
+    print(f"Pasta               {p}        $4.00           3C")
+    print(f"Gatorade            {g}        $2.00           4D")
+    print(f"Chip bags           {c}        $1.50           5E")
+main()
+while True:
+    x = input("Enter the code for the desired product, or enter 'y' to exit the shop: ")
+    if x == "1A":
+        if w <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            w-=y
+            print("Your total is:", wprice * y, "dollars")
+            print("Thank you for purchasing!")
+            main()
+    elif x == "2B":
+        if t <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            t-=y
+            print("Your total is:", tprice * y, "dollars")
+            print("Thank you for purchasing!")
+            main()
+    elif x == "3C":
+        if p <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            p-=y
+            print("Your total is:", pprice * y, "dollars")
+            print("Thank you for purchasing!")
+            main()
+    elif x == "4D":
+        if g <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            g-=y
+            print("Your total is:", gprice * y, "dollars")
+            print("Thank you for purchasing!")
+            main()
+    elif x == "5E":
+        if c <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            c-=y
+            print("Your total is:", cprice * y, "dollars")
+            print("Thank you for purchasing!")
+            main()
+    elif x == "y":
+        print("Thank you for visiting the shop!")
+        break
+
+    else:
+        print("Invalid product code or exit input. Try again")
+        main()
